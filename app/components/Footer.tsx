@@ -20,7 +20,7 @@ function Footer() {
       <nav>
         <div className="logo-con">
           <div className="logo">
-            <Image src={logo} width={36} alt="logo" />
+            {/* <Image src={logo} width={36} alt="logo" /> */}
             <h2>Logo</h2>
           </div>
           <div className="input">

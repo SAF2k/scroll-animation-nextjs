@@ -36,7 +36,7 @@ const Header = () => {
       <nav>
         {/* LOGO start */}
         <div className="logo">
-          <Image src={Logo} alt="logo" width={36} height={36} />
+          {/* <Image src={Logo} alt="logo" width={36} height={36} /> */}
           <h2>Logo</h2>
         </div>
         {/* LOGO end */}

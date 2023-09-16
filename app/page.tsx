@@ -1,32 +1,19 @@
-"use client";
+"use client"
+import styled from "styled-components";
 
 import Card from "./components/Card/Card";
 import Header from "./components/Header/Header";
 import HorizontalWrapper from "./components/HorizontalWrapper/HorizontalWrapper";
 import SelectionLayout from "./components/SelectionLayout";
-import styled from "styled-components";
 import { cards } from "./components/utils/cards";
-import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import TextSection from "./components/TextSection";
 import FullPage from "./components/FullPage/FullPage";
 import ZoomSection from "./components/ZoomSection";
 import Footer from "./components/Footer";
+import Video from "./components/Video/Video";
 
 const page = () => {
-  const video = React.useRef<HTMLVideoElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: video,
-    offset: ["start end", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 1], [1, 1, 0]);
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.6, 0.8, 0.9],
-    [1, 0.8, 0.8, 0]
-  );
 
   return (
     <>
@@ -73,14 +60,7 @@ const page = () => {
         </SelectionLayout>
 
         <SelectionLayout>
-          <motion.div className="video" style={{ opacity, scale }}>
-            <iframe
-              src="https://www.youtube.com/embed/OuaUjkZhfqQ"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </motion.div>
+          <Video />
         </SelectionLayout>
 
         <SelectionLayout>
